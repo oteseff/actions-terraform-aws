@@ -1,7 +1,7 @@
 variable "name_of_s3_bucket" {
   description = "Name of s3 bucket"
   type        = string
-  default     = "actions-terraform-aws-tfstate"
+  default     = "actions-terraform-aws-tfstate-u4h3ue"
 }
 
 variable "dynamo_db_table_name" {
