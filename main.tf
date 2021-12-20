@@ -19,8 +19,8 @@ provider "aws" {
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
-  name_of_s3_bucket           = var.name_of_s3_bucket
-  dynamo_db_table_name        = var.dynamo_db_table_name
+  name_of_s3_bucket           = "actions-terraform-aws-tfstate"
+  dynamo_db_table_name        = "aws-locks"
   #iam_user_name               = "GitHubActionsIamUser"
   #ado_iam_role_name           = "GitHubActionsIamRole"
   #aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
