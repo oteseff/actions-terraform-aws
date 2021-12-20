@@ -21,6 +21,10 @@ module "bootstrap" {
   source                      = "./modules/bootstrap"
   name_of_s3_bucket           = "actions-terraform-aws-tfstate"
   dynamo_db_table_name        = "aws-locks"
+  iam_user_name               = "GitHubActionsIamUser"
+  ado_iam_role_name           = "GitHubActionsIamRole"
+  aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
+  aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
 }
 
 /*
