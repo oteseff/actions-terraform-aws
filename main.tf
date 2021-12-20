@@ -1,13 +1,13 @@
 # Require TF version to be same as or greater than 0.12.13
 terraform {
   required_version = ">=0.12.13"
-  backend "s3" {
-    bucket         = "actions-terraform-aws-tfstate"
-    key            = "terraform.tfstate"
-    region         = "us-west-2"
-    dynamodb_table = "aws-locks"
-    encrypt        = true
-  }
+  #backend "s3" {
+  #  bucket         = "actions-terraform-aws-tfstate"
+  #  key            = "terraform.tfstate"
+  #  region         = "us-west-2"
+  #  dynamodb_table = "aws-locks"
+  #  encrypt        = true
+  #}
 }
 
 # Download any stable version in AWS provider of 2.36.0 or higher in 2.36 train
@@ -15,6 +15,8 @@ provider "aws" {
   region  = "us-west-2"
   version = "~> 2.36.0"
 }
+
+/*
 
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
@@ -26,8 +28,6 @@ module "bootstrap" {
   #aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
   #aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
 }
-
-/*
 
 # Build the VPC
 resource "aws_vpc" "vpc" {
