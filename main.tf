@@ -2,7 +2,7 @@
 terraform {
   required_version = ">=0.12.13"
   backend "s3" {
-    bucket         = "${var.name_of_s3_bucket}"
+    bucket         = "actions-terraform-aws-tfstate"
     key            = "terraform.tfstate"
     region         = "us-west-2"
     dynamodb_table = "aws-locks"
