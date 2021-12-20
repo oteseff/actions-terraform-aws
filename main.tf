@@ -1,6 +1,6 @@
 # Require TF version to be same as or greater than 0.12.13
 terraform {
-  required_version = ">=0.12.13"
+  required_version = ">=1.1.2"
   backend "s3" {
     bucket         = "actions-terraform-aws-tfstate"
     key            = "global/s3/terraform.tfstate"
@@ -13,7 +13,7 @@ terraform {
 # Download any stable version in AWS provider of 2.36.0 or higher in 2.36 train
 provider "aws" {
   region  = "us-west-2"
-  version = "~> 2.36.0"
+  version = "~> 3.70.0"
 }
 
 /*
